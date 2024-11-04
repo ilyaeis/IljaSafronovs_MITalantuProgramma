@@ -11,7 +11,7 @@ int main()
     {
         std::cout << "\n\n1: Ievadīt jaunu teksta virkni (parastie burti)\n"
                 << "2: Izvada teksta virkni uz ekrāna\n"
-                << "3. Izvada summu no 1  + ... + (n-1) + n (kur n = teksta virknes garums)\n"
+                << "3. Izvada summu no 1 + ... + (n-1) + n (kur n = teksta virknes garums)\n"
                 << "4. Izvada virkni no otrā gala(reversā)\n"
                 << "5. Saskaita un attelo cik katrs simbols atkartojas teksta virkne\n"
                 << "6. Beigt darbibu\n";
@@ -35,7 +35,7 @@ int main()
             std::cout << "\nSumma no 1 + ... + (n-1) + n (kur n = teksta virknes garums): " << sum;
             break;
         case 4:
-            std::cout << "\nVirkni no otrā gala(reversā): ";
+            std::cout << "\nVirkni no otra gala(reversa): ";
             for (int i = str.size() - 1; i >= 0; i--) {
                 std::cout << str[i];
             }
