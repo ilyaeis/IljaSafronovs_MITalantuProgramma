@@ -22,7 +22,11 @@ int main()
         switch (choice) {
         case 1:
             std::cout << "\nWrite new string, please: ";
-            std::getline(std::cin, str);
+            str.clear();
+            char ch;
+            while (std::cin.get(ch) && ch != '\n') {
+                str += ch;
+            }            
             break;
         case 2:
             std::cout << "\nCurrent string: " << str;
