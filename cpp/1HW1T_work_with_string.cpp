@@ -1,5 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
+#include <string>
 
 int main()
 {
@@ -19,14 +20,12 @@ int main()
         std::cout << "\nChoose the available options, please: ";
         std::cin >> choice;
 
+        std::cin.ignore(256, '\n'); // remaining input characters up to the next newline character are ignored (https://stackoverflow.com/questions/5739937/using-getlinecin-s-after-cin)
+
         switch (choice) {
         case 1:
             std::cout << "\nWrite new string, please: ";
-            str.clear();
-            char ch;
-            while (std::cin.get(ch) && ch != '\n') {
-                str += ch;
-            }            
+            std:getline(std::cin, str);
             break;
         case 2:
             std::cout << "\nCurrent string: " << str;
