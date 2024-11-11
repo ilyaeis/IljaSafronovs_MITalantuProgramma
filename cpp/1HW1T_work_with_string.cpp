@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
+#include <string>
 
 int main()
 {
@@ -10,19 +11,21 @@ int main()
     while (choice != 6)
     {
         std::cout << "\n\n1: Ievadīt jaunu teksta virkni (parastie burti)\n"
-                << "2: Izvada teksta virkni uz ekrāna\n"
-                << "3. Izvada summu no 1 + ... + (n-1) + n (kur n = teksta virknes garums)\n"
-                << "4. Izvada virkni no otrā gala(reversā)\n"
-                << "5. Saskaita un attelo cik katrs simbols atkartojas teksta virkne\n"
-                << "6. Beigt darbibu\n";
+            << "2: Izvada teksta virkni uz ekrāna\n"
+            << "3. Izvada summu no 1 + ... + (n-1) + n (kur n = teksta virknes garums)\n"
+            << "4. Izvada virkni no otrā gala(reversā)\n"
+            << "5. Saskaita un attelo cik katrs simbols atkartojas teksta virkne\n"
+            << "6. Beigt darbibu\n";
 
         std::cout << "\nChoose the available options, please: ";
         std::cin >> choice;
 
+        std::cin.ignore(256, '\n'); // remaining input characters up to the next newline character are ignored (https://stackoverflow.com/questions/5739937/using-getlinecin-s-after-cin)
+
         switch (choice) {
         case 1:
             std::cout << "\nWrite new string, please: ";
-            std::cin >> str;
+        std:getline(std::cin, str);
             break;
         case 2:
             std::cout << "\nCurrent string: " << str;
