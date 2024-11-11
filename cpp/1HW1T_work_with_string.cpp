@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -25,7 +25,8 @@ int main()
         switch (choice) {
         case 1:
             std::cout << "\nWrite new string, please: ";
-        std:getline(std::cin, str);
+            std:getline(std::cin, str);
+
             break;
         case 2:
             std::cout << "\nCurrent string: " << str;
