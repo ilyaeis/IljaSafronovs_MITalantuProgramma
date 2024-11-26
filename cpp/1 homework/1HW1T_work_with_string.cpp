@@ -14,14 +14,13 @@ int main()
             << "3. Izvada summu no 1 + ... + (n-1) + n (kur n = teksta virknes garums)\n"
             << "4. Izvada virkni no otrā gala(reversā)\n"
             << "5. Saskaita un attelo cik katrs simbols atkartojas teksta virkne\n"
-            << "6. Izdrukat katru 2 simbolu sakot no 5 simbola\n"
-            << "7. Beigt darbibu\n";
+            << "6. Beigt darbibu\n";
 
         std::cout << "\nChoose the available options, please: ";
         std::cin >> choice;
 
-        std::cin.ignore(256, '\n'); // remaining input characters up to the next newline character are ignored (https://stackoverflow.com/questions/5739937/using-getlinecin-s-after-cin)
-
+        // remaining input characters up to the next newline character are ignored (https://stackoverflow.com/questions/5739937/using-getlinecin-s-after-cin)
+        std::cin.ignore(256, '\n'); 
         switch (choice) {
         case 1:
             std::cout << "\nWrite new string, please: ";
@@ -61,12 +60,6 @@ int main()
             }
             break;
         case 6:
-            std::cout << "\nVirknes katris 2 simbols sakot no 5 simbola: ";
-            for (int i = 4; i < str.size(); i+=2) {
-                std::cout << str[i];
-            }
-            break;
-        case 7:
             break;
         default:
             std::cout << "\nNo such option exists, please choose another valid one\n";
