@@ -33,7 +33,11 @@ def start_loop():
             continue
 
         text = input("Type your message:\n").lower()
-        shift = int(input("Type the shift number:\n")) 
+
+        try: shift = int(input("Type the shift number:\n")) 
+        except: 
+            print("Wrong input, not a num")
+            continue
 
         formmated_shift = shift % len(latvian_alphabet)
         if choice == "decode":
