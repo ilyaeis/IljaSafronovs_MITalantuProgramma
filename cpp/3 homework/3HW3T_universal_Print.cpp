@@ -6,17 +6,17 @@
 #include <map>
 
 template <typename T>
-void Print(std::vector<T> v) {
+void Print(std::vector<T> vec) {
 	std::cout << "Vector:" << std::endl;
-	for (T i : v) {
+	for (T i : vec) {
 		std::cout << i << " ";
 	} std::cout << std::endl;
 }
 
 template <typename T>
-void Print(std::list<T> l) {
+void Print(std::list<T> lst) {
 	std::cout << "List:" << std::endl;
-	for (T i : l) {
+	for (T i : lst) {
 		std::cout << i << " ";
 	} std::cout << std::endl;
 }
@@ -31,29 +31,29 @@ void Print(std::stack<T> stk) {
 }
 
 template <typename T>
-void Print(std::set<T> s) {
+void Print(std::set<T> st) {
 	std::cout << "Set:" << std::endl;
-	for (T i : s) {
+	for (T i : st) {
 		std::cout << i << " ";
 	} std::cout << std::endl;
 }
 
 template <typename K, typename V>
-void Print(std::map<K, V> m) {
+void Print(std::map<K, V> mp) {
 	std::cout << "Map:" << std::endl;
-	for (auto it = m.cbegin(); it != m.cend(); ++it) {
+	for (auto it = mp.cbegin(); it != mp.cend(); ++it) {
 		std::cout << it->first << " : " << it->second << std::endl;
 	} 
 }
 
 int main() {
 	// Vector
-	std::vector<int> v = { 5, 1, 4, 2, 3 };
-	Print(v);
+	std::vector<int> vec = { 5, 1, 4, 2, 3 };
+	Print(vec);
 
 	// List
-	std::list<int> l = { 5, 1, 4, 2, 3 };
-	Print(l);
+	std::list<int> lst = { 5, 1, 4, 2, 3 };
+	Print(lst);
 
 	// Stack
 	std::stack<int> stk;
@@ -65,12 +65,12 @@ int main() {
 	Print(stk);
 
 	// Set
-	std::set<int> s = { 5, 1, 4, 2, 3 };
-	Print(s);
+	std::set<int> st = { 5, 1, 4, 2, 3 };
+	Print(st);
 
 	// Map
-	std::map<int, int> m = { {5, 1}, {1, 2}, {4, 3}, {2, 4}, {3, 5} };
-	Print(m);
+	std::map<int, int> mp = { {5, 1}, {1, 2}, {4, 3}, {2, 4}, {3, 5} };
+	Print(mp);
 
 	return 0;
 }
