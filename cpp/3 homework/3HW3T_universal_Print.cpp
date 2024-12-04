@@ -46,8 +46,7 @@ void Print(std::map<K, V> m) {
 	} 
 }
 
-int main()
-{
+int main() {
 	// Vector
 	std::vector<int> v = { 5, 1, 4, 2, 3 };
 	Print(v);

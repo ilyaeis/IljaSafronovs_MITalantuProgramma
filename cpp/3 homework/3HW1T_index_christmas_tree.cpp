@@ -1,8 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
 	int row;
 	std::cout << "Ievadit rindu skaitu: ";
 	std::cin >> row;

@@ -6,8 +6,7 @@ int multiply(int num) {
 	else return (num % 10) * multiply(num / 10);
 }
 
-int main()
-{
+int main() {
 	int num;
 	std::cout << "Ievadit skaitli: ";
 	std::cin >> num;
