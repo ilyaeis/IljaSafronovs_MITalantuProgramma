@@ -23,7 +23,12 @@ while (choice != 5):
             food_dict[counter] = f
 
             counter += 1
-        favourite_food.remove(food_dict[int(input("Enter the food you want to delete (num): "))])
+        user_choice = int(input("Enter the food you want to delete (num): "))
+        if 0 <= user_choice < len(favourite_food):           
+            favourite_food.remove(food_dict[user_choice])
+        else:
+            print("Wrong input!")
+
     elif (choice == "3"):
         print(f"length is {len(favourite_food)}")
     elif (choice == "4"):
@@ -32,6 +37,13 @@ while (choice != 5):
             print(f, end=" ")
         print()
     elif (choice == "5"):
+        food_to_search = input("What food are you searching for? ")
+        if food_to_search not in favourite_food: 
+            print("No such food exists")
+        else:
+            print("We have this food in set")
+
+    elif (choice == "6"):
         break
     else:
         print("Wrong input")

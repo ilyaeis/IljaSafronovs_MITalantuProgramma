@@ -8,7 +8,7 @@
 template <typename T>
 void Print(std::vector<T> vec) {
 	std::cout << "Vector:" << std::endl;
-	for (T i : vec) {
+    for (T i : vec) {
 		std::cout << i << " ";
 	} std::cout << std::endl;
 }
