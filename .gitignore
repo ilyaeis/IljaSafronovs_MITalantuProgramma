@@ -7,3 +7,5 @@
 # Do not ignore .py and .cpp files (in any folder)
 !**/*.py
 !**/*.cpp
+
+!**/MITP_cpp_2_praktiskais/MITP_cpp_2_praktiskais/MITP_cpp_2_praktiskais.cpp
