@@ -3,15 +3,15 @@
 #include <fstream>
 #include <string>
 
-void write_to_file(std::string filename, std::string text) {
-	std::ofstream out_file(filename);
-	if (out_file.is_open()) {
-		out_file << text;
+void writeToFile(std::string filename, std::string text) {
+	std::ofstream outFile(filename);
+	if (outFile.is_open()) {
+		outFile << text;
 	}
 	else {
 		std::cout << "Unable to open the file!";
 	}
-	out_file.close();
+	outFile.close();
 }
 
 int main() {
@@ -21,14 +21,14 @@ int main() {
 	std::cout << "Enter the string of chars: ";
 	std::getline(std::cin, input);
 
-	std::set<char> unique_chars;
+	std::set<char> uniqueChars;
 	for (char ch : input) {
-		if (unique_chars.find(ch) == unique_chars.end()) {
+		if (uniqueChars.find(ch) == uniqueChars.end()) {
 			output += ch;
-			unique_chars.insert(ch);
+			uniqueChars.insert(ch);
 		}
 	}
-	write_to_file("textUnique.txt", output);
+	writeToFile("textUnique.txt", output);
 
 	return 0;
 }
