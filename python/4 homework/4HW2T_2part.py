@@ -2,9 +2,14 @@
 import traceback
 
 try:
-    1 / 0 
+   raise ZeroDivisionError 
 except ZeroDivisionError as e:
+    print("ZeroDivisionError")
     try:
         raise ValueError from e
     except ValueError:
+        print("The above exception was the direct cause of the following exception:", end=" ")
+        print("ValueError")
+        print()
+        
         traceback.print_exc()

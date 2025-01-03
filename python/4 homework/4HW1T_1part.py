@@ -2,9 +2,14 @@
 import traceback
 
 try:
-    1 / 0 
+    raise ZeroDivisionError
 except ZeroDivisionError:
+    print("ZeroDivisionError")
     try:
         raise ValueError 
     except ValueError:
+        print("During handling of the above exception, another exception occurred:", end=" ")	
+        print("ValueError")
+        print()
+        
         traceback.print_exc()

@@ -1,6 +1,6 @@
 try:
     try:
-        1 / 0 
+        raise ZeroDivisionError 
     except ZeroDivisionError:
         raise ValueError
 except ValueError as e:
