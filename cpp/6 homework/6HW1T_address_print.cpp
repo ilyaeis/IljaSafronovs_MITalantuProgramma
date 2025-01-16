@@ -2,26 +2,22 @@
 using namespace std;
 
 int main() {
-	int num1, num2;
-
-	int *ptr1 = &num1;
-	int *ptr2 = &num2;
-
-	cout << endl;
-
-	cout << "In the begining:" << endl;
-	cout << "Num: " << *ptr1 << "; memory address: " << ptr1 << endl;
-	cout << "Num: " << num2 << "; memory address: " << ptr2 << endl;
+	int *ptr1 = new int;
+	int *ptr2 = new int;
 
 	cout << endl;
 	cout << "Ievadiet pirmo skaitli: ";
-	cin >> num1;
+	cin >> *ptr1;
 	cout << "Ievadiet otro skaitli: ";
 	cin >> *ptr2;
 
-	cout << endl << "After user input:" << endl;
+	cout << endl
+		 << "After user input:" << endl;
 	cout << "Num: " << *ptr1 << "; memory address: " << ptr1 << endl;
-	cout << "Num: " << num2 << "; memory address: " << ptr2 << endl;
+	cout << "Num: " << *ptr2 << "; memory address: " << ptr2 << endl;
+
+	delete ptr1;
+	delete ptr2;
 
 	return 0;
 }
