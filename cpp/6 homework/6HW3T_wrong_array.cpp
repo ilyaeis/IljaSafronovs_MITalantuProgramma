@@ -30,7 +30,8 @@ int main() {
 
 	printArr(arr, length);
 	checkIfCorrect(arr, length);
-	delete arr;
+
+	delete[] arr;
 	
 	cout << endl;
 
@@ -39,7 +40,9 @@ int main() {
 	
 	printArr(arr, length);
 	checkIfCorrect(arr, length);
-	delete arr;
+
+	delete[] arr;
+	delete length;
 
 	return 0;
 }
