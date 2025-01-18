@@ -11,16 +11,21 @@ void printArr(int *arr, int *length) {
 
 void get_in_between(int *first, int *second) {
 	cout << "Number(s) in between should be: ";
-	int *i = first;
-	(*i)++;
+	int *i = new int;
+	*i = *first + 1;
 	for (; *i < *second; (*i)++) {
 		cout << *i << " ";
 	}
 	cout << endl;
+	delete i;
 }
 
 void checkIfCorrect(int *arr, int *length) {
-	if (*arr != 1) {
+	if (*arr < 1) {
+		cout << "No negative numbers should be in the order!" << endl;
+		return;
+	}
+	else if (*arr != 1) {
 		cout << "The order is wrong in this array, because first element at address " << arr
 			 << " is not 1!" << endl;
 		int *num = new int;
