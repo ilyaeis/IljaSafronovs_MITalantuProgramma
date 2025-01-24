@@ -44,8 +44,11 @@ class QuizBrain:
         return question_answer_wanswer
     
 if __name__ == "__main__":
+    # Izveidot testa jautājumu sarakstu (3 jautājumi);
     PARAMETRS["amount"] = 3
     q_data = Data(PARAMETRS)
-
+    # Inicializē QuizBrain objektu;
     quizbrain = QuizBrain(q_data.get_question_list())
+    # Izmanto ciklu, lai izvadītu jautājumus un parādītu pareizas/nepareizas atbildes.
+    # 'for' cikls ir funkcijā QuizBrain.__str__()
     print(quizbrain)
